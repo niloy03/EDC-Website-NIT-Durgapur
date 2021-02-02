@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <title>Home</title>
+    <link rel="stylesheet" href="style/style.css">
+  
+</head>
+<body>
+    <header> <img src="img/logo.png" width="10%">
+        <h1 >ENTREPRENEURSHIP DEVELOPMENT CELL, NIT DURGAPUR</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="#">Events</a>
+        <a href="#">About Us</a>
+        <a href="login.html">Login/SignUp</a>
+    </nav>
+    <main>
+        <h2 style="font-weight: bold;font-size: larger;">Events</h2>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="img/audition.jpg"width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="img/bizzup 3.0.jpg" >
+              <div class="text">Caption Two</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="img/pitchfest.jpg" >
+              <div class="text">Caption Three</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+            </script>
+        <section>
+            <h2>About Us</h2>
+            <p>
+                <h5>Entrepreneurship Development Cell is the only independent cell of the institute commited to establishing an entrepreneurial environment in the campus. EDC organises events round the year, ranging from awareness programmes, workshops, E Talks by renowned entrepreneurs and most importantly E Summit, which is said to be the second largest E Summit of eastern India. We are infact only one of the three NITs to have collaborated with the PM Yuva Scheme. We at EDC firmly believe that Entrepreneurship is the key to India's development and with our varied initiatives, we intend to promote potential startups from our college and help India become the Innovation Hub of the world. </h5> </p>
+            
+        </section>
+        <section>
+            <h2>
+                Our Teams
+            </h2>
+            <img src="img/team.jpg" width="33%" alt="team">
+            <img src="img/team2.jpg" width="33%" alt="team2">
+            <img src="img/team3.jpg" width="33%" alt="team3">
+        </section>   
+        <section>
+                <h2>Featuring Event</h2>
+                <br>
+                <video src="video/esummit.mp4" width="50%" height="50%" autoplay muted controls></video>
+        </section>
+
+   
+        <footer class="footer">
+        
+            <ul class="r-footer">
+            <li>
+                <h2 style="color: beige;">
+                Social</h2>
+                <ul class="box">
+                    <li><a href="https://www.facebook.com/edc.nitd/"  target="_blank">Facebook</a></li>
+                    <li><a href=""https://www.youtube.com/channel/UCaBiTXfp5gknGPS6N3asDBg/" target="_blank">Youtube</a></li>
+                    <li><a href="https://www.instagram.com/edc.nitd/"  target="_blank">Instagram</a></li>
+                    <li><a href="https://in.linkedin.com/company/edcnitd"  target="_blank">LinkedIn</a></li>
+                    </ul>
+            </li>
+            <li class="features">
+            <h2 style="color: blanchedalmond;">
+            Information</h2>
+            <ul class="box h-box">
+                <li><a href="#">Events</a></li>
+                <li><a href="#">AboutUs</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Featuring Event</a></li>
+                <li><a href="#">Login/SingUp</a></li>
+            </ul>
+            </li>
+            <li>
+                <h2 style="color: azure;">
+                Our President</h2>
+                <ul class="box">
+                    <li><a href="#">Rima Roy</a></li>
+                    <li><a href="#">rima94772@gmail.com</a></li>
+                </ul>
+            </li>
+            </ul>
+            <div class="b-footer">
+                <p>
+                All rights reserved by ©Entrepreneurship Devlopment Cell, NIT Durgapur</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
